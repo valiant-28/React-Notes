@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <div id="root">
+        <!-- This is where our React app will be rendered -->
+        NOT RENDER YET! <!--i.e if there is any problem in rendering of react app
+        NOT RENDER YET! WILL APPER-->
+
+        <!--React will override all things present inside Root with whatever we give inside Render-->
+        <!-- <h1>Hello World</h1>
+        <h1>Hello World</h1>
+        <h1>Hello World</h1>
+        <h1>Hello World</h1> -->
+    </div> 
+    <!-- IN TH APP THERE IS ONLY ONE ROOT -->
+
+
+    <!-- HOW CAN WE CREATE THE BELOW STRUCTURE using react-->
+    <!-- <div id="container">
+        <h1>Heaading 1</h1>
+        <h2>Heading 2</h2>
+    </div> -->
+</body>
+<!-- 
+<script>
+    const heading =document.createElement("h1");
+
+    heading.innerHTML= "Hi this is js"
+
+    const root = document.getElementById("root")
+
+    root.appendChild(heading);
+</script> -->
+
+
+<!-- INJECTING REACT USING CDN LINKS -->
+
+<script 
+    crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
+</script>
+<script 
+    crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+</script>
+
+<script>
+    // const heading = React.createElement('h1', {
+    //     id: 'myHeading',
+    //     className:'myClass',
+    //     // style:{color:"red", fontSize:20}
+    // }/*<h1 id=""></h1>  inside the object we can include id,class..*/ , 'Hello World from react');
+
+   // const heading = React.createElement('h1',null, 'Hello World from react');
+ 
+    //console.log(heading);
+
+    const heading = React.createElement("h1", {
+        id:  'myHeading',
+    },"This is Heading 1");
+
+    const heading2 = React.createElement("h2", {
+        id:  'myHeading2',
+    },"This is Heading 2");
+
+    const container =  React.createElement("div", {
+        id:"container"
+    }, [heading, heading2]/* PASS MULTIPLE CHILD INSIDE ARRAY*/);
+
+
+    const root = ReactDOM.createRoot(document.getElementById('root')); // this tells the browser where we want to run the react code
+
+    //passing a react element inside the root
+    // root.render(heading);
+    root.render(container);
+
+
+</script>
+</html>
