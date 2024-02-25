@@ -1,0 +1,73 @@
+01) WHAT IS NPM?
+    --NPM does'nt stand for node package manager
+
+02) WHY DO WE USE NPM?
+   --Because a react app is powered by a lot of things ( i.e suppose we have to bundle things up, we have to minfy things
+   ,we have to remove console log, wehave to optimize app etc..) for we need lot of helper pakages and those helper pakages come inside NPM  
+
+***npm init** => Package-jason
+
+
+
+03) npm install -D parcel // here -D stands for dev dependency(i.e we want to use these for developer side not in production)
+
+04) Difference between caret(^) and tilda(~)?
+        -- (^) => THIS ALLOW FOR AUTO UPDATATION 
+
+05) package-lock => lock the version of  a dependency.
+                 => NEVER PUT PACKAGE-LOCK IN GITIGNORE
+                 => it has hash of the package version to maintain the integrity
+
+
+06) Node_Modules => It is where all dependencies are installed when we run npm install in our project.
+                    Or we can say it act like a database for  storing all packages that are used by our application.
+                 => Never put  your node_modules folder into git repository, because our **package-lock.json** any one ca regenerate the node_modules
+
+07) npm install react => we want react for global not only for developer side but also in server side 
+    npm i react-dom               
+    
+    ** BUT WHY NOT CDN ** =>  Because CDNs do not provide any way to update or manage packages
+                          => and more over cdn is on another server which makes the render of website slow
+                             where as nodemodules will be at servers so makes the website fast.
+
+08) PARCEL IMPORTANCE
+
+
+   * Created A Server
+   * HMR-Hot Module Replacement, Parcle do  that by default while developing an application.
+   * File Watcher Agorithm - C++
+   * Parcel-cache
+   * dist folder- 
+   * MINIFY
+   * bundle
+   * cleaning our code
+   * Dev and Production Build
+   * Super Fast Build Algorithm
+   * Image Optimization
+   * Caching while development
+   * Compression
+   * Compatible with older version of browser**
+   * HTTPS  on  localhost:1234/index.html
+   * Manages Port Number
+   * Consistent Hashing Algorthim
+   * Zero Config 
+
+  
+   ** npx parcel entry_point_of_your project(her it is index.html)**
+   ###WE SHOULD PUT PARCEL-CACHE IN  .gitignore BECAUSE any thing which can be generate in the server will be puch into gitignore
+
+
+09) Why React is Fast?
+
+10) Difference between dev dependencies And dependencies?
+
+
+11) browserlist => 
+  
+
+***### TRANSITIVE DEPENDENCIES ###*** 
+        
+         OR(we can say)
+
+***### DEPENDENCIES TREE ###*** 
+//We have our package manager which take care of the transitive dependencies of our code
